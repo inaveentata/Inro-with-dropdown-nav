@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  position: relative;
+  background-color: #fafafa;
+}
+
+.show-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+header {
+  padding: 1rem;
+  min-height: 5vh;
+  position: relative;
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 0 0 2rem;
+  }
+}
+
+header .logo-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo-menu .menu-icon {
+  cursor: pointer;
+  display: block;
+}
+
+@media screen and (min-width: 700px) {
+  header .logo-menu .menu-icon {
+    display: none;
+  }
+}
+
+header .show-nav {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+header nav {
+  color: dimgray;
+  width: 65%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5rem 1.5rem;
+  -webkit-transition: -webkit-transform 0.8s linear;
+  transition: -webkit-transform 0.8s linear;
+  transition: transform 0.8s linear;
+  transition: transform 0.8s linear, -webkit-transform 0.8s linear;
+  z-index: 100;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+@media screen and (min-width: 700px) {
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 5rem;
+    overflow: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    padding: 0.5rem;
+    position: relative;
+  }
+}
+
+header nav img {
+  display: inline-block;
+  text-align: right;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  header nav img {
+    display: none;
+  }
+}
+
+header nav ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 700px) {
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+header nav ul li {
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 700px) {
+  header nav ul li {
+    margin-left: 2rem;
+  }
+}
+
+header nav ul li span img {
+  display: inline-block;
+  position: inherit;
+  text-align: center;
+  margin-left: 5px;
+}
+
+header nav .featurs-list,
+header nav .company-list {
+  /* add to functionality */
+  height: 0;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 700px) {
+  header nav .featurs-list,
+  header nav .company-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 4rem;
+  }
+}
+
+header nav .featurs-list li,
+header nav .company-list li {
+  padding-left: 2rem;
+  padding-top: 0.2rem;
+}
+
+@media screen and (min-width: 700px) {
+  header nav .featurs-list li,
+  header nav .company-list li {
+    margin-left: 0;
+    z-index: 10;
+    padding: 0;
+  }
+}
+
+header nav .featurs-list li span,
+header nav .company-list li span {
+  text-align: center;
+  margin-right: 15px;
+}
+
+header nav .featurs-list li span img,
+header nav .company-list li span img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  header nav .company-list {
+    left: 180px;
+  }
+}
+
+header nav .show-list {
+  height: 15vh;
+  overflow: visible;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 10px 0px #e0e0e0;
+          box-shadow: 0 0 10px 0px #e0e0e0;
+}
+
+header nav div {
+  text-align: center;
+  margin: 1.7rem 0;
+}
+
+header nav div p {
+  cursor: pointer;
+}
+
+header nav div p:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 700px) {
+  header nav div {
+    position: absolute;
+    right: -40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+header nav div button {
+  color: dimgray;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 0.7rem 0;
+  background-color: transparent;
+  border: 2px solid dimgray;
+  border-radius: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header nav div button:hover {
+  color: #000;
+  border: 2px solid #000;
+}
+
+@media screen and (min-width: 700px) {
+  header nav div button {
+    margin: 0 1rem;
+    padding: 0.6rem 1.3rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    padding: 5rem;
+    max-width: 1440px;
+  }
+}
+
+main section .img-container {
+  height: 45vh;
+}
+
+@media screen and (min-width: 600px) {
+  main section .img-container {
+    width: 50vw;
+    height: 70vh;
+  }
+}
+
+main section .img-container .image-hero {
+  background-image: url("/images/image-hero-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  main section .img-container .image-hero {
+    background-image: url("/images/image-hero-desktop.png");
+    background-size: cover;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  main section .img-container .image-hero {
+    background-size: contain;
+  }
+}
+
+main section .info-container {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+@media screen and (min-width: 700px) {
+  main section .info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: left;
+    padding: 0 5rem 0 3rem;
+  }
+}
+
+main section .info-container h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 700px) {
+  main section .info-container h1 {
+    font-size: 5rem;
+  }
+}
+
+main section .info-container p {
+  font-weight: 500;
+  color: dimgray;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+main section .info-container button {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #141414;
+  color: #fafafa;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+main section .info-container button:hover {
+  background-color: #fafafa;
+  color: #141414;
+  border: 1px solid #141414;
+}
+
+@media screen and (min-width: 700px) {
+  main section .info-container button {
+    display: block;
+    margin-right: auto;
+  }
+}
+
+main section .info-container .client-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 3rem 0;
+}
+
+@media screen and (min-width: 700px) {
+  main section .info-container .client-container {
+    margin: 7rem 0 0 0;
+  }
+}
+
+main section .info-container .client-container div > img {
+  width: 67px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 0;
+}
+/*# sourceMappingURL=style.css.map */
