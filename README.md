@@ -27,8 +27,8 @@ Click [here](./Screenshot.png) to see the screenshot of challange
 
 ### Links
 
-- Solution URL: [Solution url](https://your-solution-url.com)
-- Live Site URL: [Live site url](https://your-live-site-url.com)
+- Solution URL: [Solution url](https://github.com/inaveentata/Inro-with-dropdown-nav)
+- Live Site URL: [Live site url](https://intro-with-dropdown-nav.netlify.app/)
 
 ## My process
 
